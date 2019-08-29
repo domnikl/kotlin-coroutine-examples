@@ -16,6 +16,7 @@ fun main() {
     println("start")
 
     runBlocking {
+        // launch always need a CoroutineScope to run in
         launch { task1() }
         launch { task2() }
         println("called task1 and task2 from ${Thread.currentThread()}")
