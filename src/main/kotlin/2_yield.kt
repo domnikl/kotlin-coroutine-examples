@@ -1,13 +1,21 @@
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.yield
+
+// this launches 2 coroutines and runs them concurrently (on the main thread) but
+// uses yield() to yield the current coroutine to others to run
 
 fun main() {
-    fun task1() {
+    suspend fun task1() {
         println("start task1 in Thread ${Thread.currentThread()}")
+        yield()
+        delay(2000)
         println("end task1 in Thread ${Thread.currentThread()}")
     }
-    fun task2() {
+    suspend fun task2() {
         println("start task2 in Thread ${Thread.currentThread()}")
+        yield()
         println("end task2 in Thread ${Thread.currentThread()}")
     }
 
