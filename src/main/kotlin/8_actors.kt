@@ -17,7 +17,6 @@ fun CoroutineScope.printActor(context: CoroutineContext) = actor<String>(context
     println(messages.joinToString(", "))
 }
 
-@ExperimentalCoroutinesApi
 @ObsoleteCoroutinesApi
 fun main()  = runBlocking<Unit> {
     val actor = printActor(Dispatchers.Default)
