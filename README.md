@@ -11,3 +11,4 @@ It attempts to explain various use-cases around coroutines in simple terms to ex
 1. [async and exceptions](src/main/kotlin/async_and_exceptions.kt): exceptions in `async()` coroutines
 1. [produce](src/main/kotlin/produce.kt): how to produce values and use `ReceiveChannel`
 1. [actors](src/main/kotlin/actors.kt): how to use actors in Kotlin
+1. [flow](src/main/kotlin/flow.kt): uing `Flow` to build sequential streams of events
